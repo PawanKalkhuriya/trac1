@@ -3,9 +3,9 @@ body { font-family: Arial, sans-serif; margin:0; padding:0; background:#F9F9F9; 
 .site-header {background:#0C2340; color:white; padding:1rem; display:flex; justify-content:space-between; align-items:center;height:40px;}
 .site-header a {color:white; margin:0 0.7rem; text-decoration:none;}
 .site-header a:hover {text-decoration:underline;}
-.main-nav {display:flex; flex-wrap:wrap;}
-.page-content {padding:1rem;}
-.card {background:white; padding:1rem; margin-top:1rem; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1);}
+.main-nav {display:flex; flex-wrap:wrap;overflow:hidden;justify-content: space-between;padding: 10px 20px}
+.page-content {padding:0;}
+.card {display:flex;background:white; padding:1rem; margin-top:1rem; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1);}
 .site-footer {background:#0C2340; color:white; text-align:center; padding:0.5rem; margin-top:2rem;}
 .brand{display: flexbox; align-items: center;}
 .site-header img{height: 70px;;width: 150px;}
@@ -74,7 +74,7 @@ body { font-family: Arial, sans-serif; margin:0; padding:0; background:#F9F9F9; 
    background-color: #0C2340;
    color: #f0f0f0;
   padding: 5px;}
-.card table {
+.card-about table {
   display: flexbox;
   align-items: center;
   width: 100%;
@@ -86,14 +86,14 @@ body { font-family: Arial, sans-serif; margin:0; padding:0; background:#F9F9F9; 
   overflow: hidden;
   box-shadow: 0 2px 2px rgba(0,0,0,0.05);
 }
-.card thead{display: flexbox;
+.card-about thead{display: flexbox;
   align-items: center;
   height: 40px;
   background-color: #0C2340;
   color: white;
   padding-top: 2px;}
 
-.card td{
+.card-about td{
   align-content: center;
 }
 @media (max-width: 600px) {
@@ -101,4 +101,95 @@ body { font-family: Arial, sans-serif; margin:0; padding:0; background:#F9F9F9; 
     display: none;}
   }
 .aboutbox{display: flexbox; width: 100%; align-content: center;}
- 
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color:#0C2340;
+  }}
+  .hamburger {
+    display: none;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+    display: block;
+  }
+  li {
+    padding: 10px 10px;
+    list-style-type: none;
+}
+
+.contact-boxes {
+  display: flex;
+  justify-content:center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 40px;
+}
+.contact-card {
+  background: white;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  text-align: center;
+  padding: 20px;
+  flex: 1 1 280px;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.contact-card h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #002060;
+  margin: 15px 0 10px;
+}
+.contact-card .detail {
+  color: black;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+.icon-circle {
+  width: 100px;
+  height: 100px;
+  background: #132469;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  color: white;
+}
+.action {
+  border-top: 1px solid #ddd;
+  padding-top: 12px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+.action i {
+  font-size: 16px;
+}
+.phone { border-color:#002060; }
+.mail { border-color: #002060; }
+.add { border-color: #002060;}
+.contact-card:hover {
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+}
+.home-img img{display:flex;
+              width: 100%;
+              height: 400px;
+              padding: 0%;
+              }
+.card img{display:flex;
+              width:70%;
+              height:300px;
+              padding:0%;
+        }
